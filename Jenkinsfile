@@ -1,10 +1,10 @@
 pipeline {
     agent {
-        node{
+        node {
             label 'maven_slave'
         }
     }
-environment {
+environment{
     PATH = "/opt/apache-maven-3.9.6/bin:$PATH"
 }
     stages {
@@ -15,5 +15,5 @@ environment {
                  echo "----------- build complted ----------"
             }
         }
-}
+    }
 }
