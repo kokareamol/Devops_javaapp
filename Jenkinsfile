@@ -4,11 +4,13 @@ pipeline {
             label 'maven_slave'
         }
     }
-
+environment {
+    PATH= "/opt/apache-maven-3.9.6/bin/:$PATH"
+}
     stages {
-        stage('testing connectivity') {
+        stage('Build') {
             steps {
-                echo 'Hello from slave'
+                sh 'mvn clean depoly'
             }
         }
     }
