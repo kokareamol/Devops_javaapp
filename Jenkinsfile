@@ -5,10 +5,10 @@ pipeline {
         }
     }
 environment {
-    PATH= "/opt/apache-maven-3.9.6/bin/:$PATH"
+    PATH = "/opt/apache-maven-3.9.6/bin:$PATH"
 }
     stages {
-        stage('Build') {
+        stage("Build") {
             steps {
                 sh 'mvn clean depoly'
             }
