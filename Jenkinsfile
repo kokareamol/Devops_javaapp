@@ -21,6 +21,14 @@ environment{
             }
         }
 
+        stage("Unit Test") {
+            steps {
+               echo "-----------unit test started ----------"
+              sh 'mvn surefire-report:report'
+               echo "----------- unit test completed complted ----------"
+          }
+        }
+
          
         stage('SonarQube Analysis') {
         environment {    
