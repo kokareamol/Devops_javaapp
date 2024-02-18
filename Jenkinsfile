@@ -93,9 +93,9 @@ environment{
 
     stage("deploy") {
         steps {
-             echo "-----------deploying on k8s cluster ----------"
-            sh './deploy.sh'
-             echo "----------- deployment successful ----------"
+             echo "-----------HELM DEPLOY STARTED ----------"
+            sh 'helm install ttrend ttrend-0.1.0.tgz '
+             echo "----------- helm deploy completed ----------"
           }
         }
 }       
