@@ -1,6 +1,6 @@
 def registry = 'https://amolkokare.jfrog.io'
 def imageName = 'amolkokare.jfrog.io/docker-repo-docker-local/myapp'
-def version   = '2.1.2'
+def version   = '2.1.3'
 
 
 pipeline {
@@ -13,7 +13,7 @@ environment{
     PATH = "/opt/apache-maven-3.9.6/bin:$PATH"
 }
     stages {
-        stage("Build-day3") {
+        stage("Build Stage AK") {
             steps {
                  echo "----------- build started ----------"
                 sh 'mvn clean deploy -Dmaven.test.skip=true'
@@ -21,7 +21,7 @@ environment{
             }
         }
 
-        stage("Unit Test") {
+        stage("Unit Test AK") {
             steps {
                echo "-----------unit test started ----------"
               sh 'mvn surefire-report:report'
@@ -30,7 +30,7 @@ environment{
         }
 
          
-        stage('SonarQube Analysis') {
+        stage('SonarQube Analysis AK') {
         environment {    
           scannerHome = tool 'sonar-scanner'
         }
