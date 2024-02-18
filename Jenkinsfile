@@ -1,5 +1,5 @@
 def registry = 'https://amolkokare.jfrog.io'
-def imageName = 'amolkokare.jfrog.io/valaxy-docker-local/myapp'
+def imageName = 'amolkokare.jfrog.io/docker-repo-docker-local/myapp'
 def version   = '2.1.2'
 
 
