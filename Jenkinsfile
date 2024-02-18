@@ -90,5 +90,13 @@ environment{
             }
         }
     } 
+
+    stage("deploy") {
+        steps {
+             echo "-----------deploying on k8s cluster ----------"
+            sh './deploy.sh'
+             echo "----------- deployment successful ----------"
+          }
+        }
 }       
 }
